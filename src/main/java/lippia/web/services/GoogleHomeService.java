@@ -18,10 +18,10 @@ public class GoogleHomeService extends ActionManager {
     }
 
     public static void enterSearchCriteria(String text) {
-        setInput(GoogleConstants.INPUT_SEARCH_XPATH, text);
+        setInput(GoogleConstants.INPUT_SEARCH, text);
     }
 
     public static void clickSearchButton() {
-        click(GoogleConstants.SEARCH_BUTTON_NAME);
+        click(GoogleConstants.SEARCH_BUTTON);
     }
 }

@@ -10,7 +10,7 @@ import org.testng.Assert;
 public class GoogleSearchResultService extends ActionManager {
 
     private static WebElement stats() {
-        return getElement(GoogleConstants.STATS_ID);
+        return getElement(GoogleConstants.STATS);
     }
 
     public static String getStats() {
