@@ -1,7 +1,7 @@
 @LogIn
 Feature: Clockify log in
 
-  @ToBeAutomated @LogInFromHomePage
+  @ToBeAutomated @LogInFromHomePage @Do
   Scenario: Access to Log in from clockify home page successfully
     Given The client is on clockify home page
     When The client click on LogIn button
@@ -17,6 +17,6 @@ Feature: Clockify log in
     Then The client is on the dashboard
 
     Examples:
-      | email                  | password  |
-      | cfiguera83@gmail.com   | Paty.2236 |
-      | cfiguera83@hotmail.com | Paty.2236 |
+      | email                  | password |
+      | cfiguera83@gmail.com   | XXXXXX   |
+      | cfiguera83@hotmail.com | XXXXXX   |

@@ -8,12 +8,12 @@ public class LogInConstants {
     public static final String INPUT_ = "']";
 
     //Button
-    public static final String LOGIN_BUTTON_NAME = "/html/body/nav/div/div[3]/a[1]";
+    public static final String LOGIN_BUTTON_NAME = "//*[@class='btn-login hidden-sm']";
 
     //Manually Log In
-    public static final String MANUALLY_LOGIN_BUTTON_NAME = "/html/body/app-root/register-layout/div/div/div/div/div[2]/login/div/form/div/div/div[3]/a";
-    public static final String ENTER_EMAIL = "/html/body/app-root/register-layout/div/div/div/div/div[2]/login/div/form/div/div/div[2]/div[1]/input";
-    public static final String ENTER_PASSWORD = "/html/body/app-root/register-layout/div/div/div/div/div[2]/login/div/form/div/div/div[2]/div[2]/app-password-input/div/div[1]/input";
-    public static final String LOG_IN = "/html/body/app-root/register-layout/div/div/div/div/div[2]/login/div/form/div/div/div[3]/div[2]/button";
+    public static final String MANUALLY_LOGIN_BUTTON_NAME = "//*[@class='cl-d-block cl-text-center ng-tns-c131-2 ng-star-inserted']";
+    public static final String ENTER_EMAIL = "//input[@id='email']";
+    public static final String ENTER_PASSWORD = "//input[@id='password']";
+    public static final String LOG_IN = "//button[normalize-space()='Log In']";
 
 }

@@ -32,10 +32,9 @@ public class LogInService {
     public static void SetEMail(String email) {setInput(LogInConstants.ENTER_EMAIL, email);}
 
     //Set password
-    public static void SetPassword(String password) {setInput.ENTER_PASSWORD, password;}
+    public static void SetPassword(String password) {setInput(LogInConstants.ENTER_PASSWORD, password);}
 
     //Click log in
     public static void clickLogIn() {click(LogInConstants.LOG_IN);}
-
 
 }

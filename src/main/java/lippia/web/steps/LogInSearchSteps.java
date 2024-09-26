@@ -39,13 +39,13 @@ public class LogInSearchSteps {
     }
 
     @And("the client set the email {string}")
-    public void theClientSetTheEmail(int arg0) {
-        LogInService.SetEMail();
+    public void theClientSetTheEmail(String email) {
+        LogInService.SetEMail(email);
     }
 
     @And("the client set the password {string}")
-    public void theClientSetThePassword(int arg0) {
-        LogInService.SetPassword();
+    public void theClientSetThePassword(String password) {
+        LogInService.SetPassword(password);
     }
 
     @And("the client click on LogIn button")
