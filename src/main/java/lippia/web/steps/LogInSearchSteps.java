@@ -10,7 +10,7 @@ import lippia.web.services.LogInService;
 
 public class LogInSearchSteps {
 
-    //Get Access to log In From Home Page
+    //Get Access to log In From Clockify Home Page
     @Given("^The client is on clockify home page$")
     public void ClockifyHomePage() {
         LogInService.navegarWebClockify();
