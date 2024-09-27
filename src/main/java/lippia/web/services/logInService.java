@@ -18,7 +18,7 @@ public class logInService {
     }
 
     //Clockify Log In Page
-    public static void loInPage(){
+    public static void logInPage(){
         navigateTo("https://app.clockify.me/en/login");
     }
 

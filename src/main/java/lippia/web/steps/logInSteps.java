@@ -10,27 +10,11 @@ import lippia.web.services.logInService;
 
 public class logInSteps extends PageSteps {
 
-    //Get Access to log In From Clockify Home Page
-    @Given("^The client is on landing page$")
-    public void TheClientIsOnLandingPage() {
-        landingPageService.navegarWebClockify();
-    }
-
-    @When("^The client click on LogIn button(.*)$")
-    public void TheClientClickOnLogIn(String criteria) {
-        landingPageService.clickLogInButton();
-    }
-
-    @Then("The client get access to clockify LogIn page")
-    public void TheClientGetAccessToClockifyLogIn() {
-        landingPageService.landingPage();
-    }
-
 
     //Manually log In
     @Given("^The client is on clockify log in page$")
     public void LogInPage() {
-        logInService.loInPage();
+        logInService.logInPage();
     }
 
     @When("The client click on 'Log in manually'")
