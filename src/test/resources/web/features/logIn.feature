@@ -1,22 +1,17 @@
 @LogIn
 Feature: Clockify log in
 
-  @ToBeAutomated @LogInFromHomePage @Do
+  @ToBeAutomated @LogInFromHomePage
   Scenario: Access to Log in from clockify home page successfully
-    Given The client is on clockify home page
+    Given The client is on landing page
     When The client click on LogIn button
     Then The client get access to clockify LogIn page
 
-  @Smoke @Candidate @LogInManually
-  Scenario Outline: The client manually log in to clockify successfully
+  @Smoke @Candidate @LogInManually @Do
+  Scenario: The client manually log in to clockify successfully
     Given The client is on clockify log in page
     When The client click on 'Log in manually'
-    And the client set the email "<email>"
-    And the client set the password "<password>"
+    And the client set the email 'cfiguera83@gmail.com'
+    And the client set the password 'Paty.2236'
     And the client click on LogIn button
-    Then The client is on the dashboard
-
-    Examples:
-      | email                  | password |
-      | cfiguera83@gmail.com   | XXXXXX   |
-      | cfiguera83@hotmail.com | XXXXXX   |
+    Then The client is on the time tracker page

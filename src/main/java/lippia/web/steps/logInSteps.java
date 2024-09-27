@@ -1,58 +1,57 @@
 package lippia.web.steps;
 
+import com.crowdar.core.PageSteps;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en.And;
-import lippia.web.services.GoogleSearchResultService;
-import lippia.web.services.LogInSearchResultService;
-import lippia.web.services.LogInService;
+import lippia.web.services.landingPageService;
+import lippia.web.services.logInService;
 
-public class LogInSearchSteps {
+public class logInSteps extends PageSteps {
 
     //Get Access to log In From Clockify Home Page
-    @Given("^The client is on clockify home page$")
-    public void ClockifyHomePage() {
-        LogInService.navegarWebClockify();
+    @Given("^The client is on landing page$")
+    public void TheClientIsOnLandingPage() {
+        landingPageService.navegarWebClockify();
     }
 
     @When("^The client click on LogIn button(.*)$")
     public void TheClientClickOnLogIn(String criteria) {
-        LogInService.clickLogInButton();
+        landingPageService.clickLogInButton();
     }
 
     @Then("The client get access to clockify LogIn page")
     public void TheClientGetAccessToClockifyLogIn() {
-        LogInSearchResultService.verifyResults();
+        landingPageService.landingPage();
     }
 
 
-    //LogIn
+    //Manually log In
     @Given("^The client is on clockify log in page$")
     public void LogInPage() {
-        LogInService.navegarWebLogIn();
+        logInService.loInPage();
     }
 
     @When("The client click on 'Log in manually'")
-    public void theClientClickOnButton(String arg0) {
-        LogInService.clickManuallyLogIn();
+    public void theClientClickOnLogInManually(String arg0) {
+        logInService.logInManually();
     }
 
-    @And("the client set the email {string}")
+    @And("the client set the email '(.*)'")
     public void theClientSetTheEmail(String email) {
-        LogInService.SetEMail(email);
+        logInService.setEmail( email );
     }
 
     @And("the client set the password {string}")
     public void theClientSetThePassword(String password) {
-        LogInService.SetPassword(password);
+        logInService.setPassword( password );
     }
 
     @And("the client click on LogIn button")
     public void theClientClickOnLogInButton() {
-        LogInService.clickLogIn();
+        logInService.clickLogIn();
     }
-
 
 
 }
