@@ -27,7 +27,7 @@ public class logInSteps extends PageSteps {
         logInService.setEmail( email );
     }
 
-    @And("the client set the password {string}")
+    @And("the client set the password (.*)")
     public void theClientSetThePassword(String password) {
         logInService.setPassword( password );
     }
