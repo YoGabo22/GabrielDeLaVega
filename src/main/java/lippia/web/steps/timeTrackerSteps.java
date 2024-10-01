@@ -8,7 +8,7 @@ import static com.crowdar.core.actions.WebActionManager.navigateTo;
 
 public class timeTrackerSteps {
 
-    @Then("The client is on the time tracker page")
+    @Then("The client is on clockify dashboard page")
     public void TheClientIsOnTheDashboard(){
 
         logInService.timeTrackerPage();
