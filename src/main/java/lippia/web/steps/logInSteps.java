@@ -12,22 +12,22 @@ public class logInSteps extends PageSteps {
 
 
     //Manually log In
-    @Given("^The client is on clockify log in page$")
+    @Given("The client is on clockify log in page")
     public void LogInPage() {
         logInService.logInPage();
     }
 
     @When("The client click on 'Log in manually'")
-    public void theClientClickOnLogInManually(String arg0) {
+    public void theClientClickOnLogInManually() {
         logInService.logInManually();
     }
 
-    @And("the client set the email '(.*)'")
+    @And("^the client set the email '(.*)'$")
     public void theClientSetTheEmail(String email) {
         logInService.setEmail( email );
     }
 
-    @And("the client set the password (.*)")
+    @And("^the client set the password (.*)$")
     public void theClientSetThePassword(String password) {
         logInService.setPassword( password );
     }
