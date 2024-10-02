@@ -13,30 +13,37 @@ public class logInSteps extends PageSteps {
 
     //Manually log In
     @Given("The client is on clockify log in page")
-    public void LogInPage() {
-        logInService.logInPage();
+        public void LogInPage() {
+            logInService.logInPage();
     }
 
     @When("The client click on 'Log in manually'")
-    public void theClientClickOnLogInManually() {
-        logInService.logInManually();
+        public void theClientClickOnLogInManually() {
+            logInService.logInManually();
     }
 
-    @And("^the client set the email '(.*)'$")
-    public void theClientSetTheEmail(String email) {
-        logInService.setEmail( email );
+    @And("^The client set the email (.*)$")
+        public void theClientSetTheEmail(String email) {
+            logInService.setEmail( email );
     }
 
-    @And("^the client set the password (.*)$")
-    public void theClientSetThePassword(String password) {
-        logInService.setPassword( password );
+    @And("^The client set the password (.*)$")
+        public void theClientSetThePassword(String password) {
+            logInService.setPassword( password );
     }
 
-    @And("the client click on LogIn button")
-    public void theClientClickOnLogInButton() {
-        logInService.clickLogIn();
+    @And("The client click on Login button")
+        public void theClientClickOnLogInButton() {
+            logInService.clickLogIn();
     }
 
+    @And("The client click on password")
+        public void PasswordClick() {
+            logInService.passwordClick();
+    }
 
-
+    @Then ("The system notified error message")
+        public void InvalidEmail() {
+            logInService.ErrorVerification();
+    }
 }

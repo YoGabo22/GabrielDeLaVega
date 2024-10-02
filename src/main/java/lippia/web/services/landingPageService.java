@@ -3,6 +3,7 @@ package lippia.web.services;
 import com.crowdar.core.PropertyManager;
 import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
+import junit.framework.Assert;
 import lippia.web.constants.LandingPageConstants;
 import lippia.web.constants.logInConstants;
 
@@ -29,6 +30,11 @@ public class landingPageService extends ActionManager {
         navigateTo("https://app.clockify.me/en/login");
     }
 
+    //Verify log in button
+    public static void GoogleButton() {
+        waitVisibility(LandingPageConstants.GOOGLE_BUTTON);
+        Assert.assertTrue(isVisible(LandingPageConstants.GOOGLE_BUTTON));
+    }
 
 
 }

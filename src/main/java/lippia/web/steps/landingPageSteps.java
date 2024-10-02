@@ -13,14 +13,15 @@ public class landingPageSteps {
         landingPageService.navegarWebClockify();
     }
 
-    @When("^The client click on LogIn button(.*)$")
-    public void TheClientClickOnLogIn(String criteria) {
+    @When("The client click on LogIn button")
+    public void ClickLogIn() {
         landingPageService.clickLogInButton();
     }
 
     @Then("The client get access to clockify LogIn page")
     public void TheClientGetAccessToClockifyLogIn() {
         landingPageService.landingPage();
+        landingPageService.GoogleButton();
     }
 
 }

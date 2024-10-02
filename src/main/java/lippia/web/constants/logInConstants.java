@@ -9,6 +9,12 @@ public class logInConstants {
     public static final String ENTER_PASSWORD = "xpath://*[@class='cl-form-control']";
     public static final String LOG_IN = "xpath://*[@data-test-id='login-button']";
 
+    //Inavlid email message
+    public static final String INVALID_EMAIL = "xpath://*[@data-test-id='invalid-email']";
+
+    //Click password
+    public static final String CLICK_PASSWORD = "xpath://*[@class='cl-form-control']";
+
 
 
 }

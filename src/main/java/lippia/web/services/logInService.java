@@ -1,8 +1,11 @@
 package lippia.web.services;
 
 import com.crowdar.core.actions.WebActionManager;
+import junit.framework.Assert;
 import lippia.web.constants.logInConstants;
 
+import static com.crowdar.core.actions.ActionManager.isVisible;
+import static com.crowdar.core.actions.ActionManager.waitVisibility;
 import static com.crowdar.core.actions.WebActionManager.navigateTo;
 
 public class logInService {
@@ -34,7 +37,20 @@ public class logInService {
 
     //Navigate to Clockify Time Tracker
     public static void timeTrackerPage(){
-        navigateTo("https://app.clockify.me/tracker#");
+        navigateTo("https://app.clockify.me/workspaces");
     }
+
+    //Click password
+    public static void passwordClick(){
+        WebActionManager.click(logInConstants.CLICK_PASSWORD);
+    }
+
+    //Verify error notification
+    public static void ErrorVerification(){
+        waitVisibility(logInConstants.INVALID_EMAIL);
+        Assert.assertTrue(isVisible(logInConstants.INVALID_EMAIL));
+
+    }
+
 
 }
