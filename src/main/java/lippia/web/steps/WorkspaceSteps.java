@@ -1,6 +1,7 @@
 package lippia.web.steps;
 
 import com.crowdar.core.PageSteps;
+import com.crowdar.core.actions.WebActionManager;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -32,7 +33,7 @@ public class WorkspaceSteps extends PageSteps {
     @And("^The client set the new workspace name '(.*)'$")
         public void  setNewWorkspaceName(String name) {
             WorkspaceService.newWorkspaceName( name );
-            WorkspaceService.randomNumber();
+
         }
 
     @And("The client click on 'Create'")

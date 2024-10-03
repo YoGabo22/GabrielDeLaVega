@@ -14,7 +14,7 @@ public class WorkspaceService {
 
     //Clockify page
     public static void ClockifyPage() {
-        WebActionManager.navigateTo("https://app.clockify.me/workspaces");
+        navigateTo("https://app.clockify.me/workspaces");
     }
 
     //Create new workspace button
@@ -48,12 +48,6 @@ public class WorkspaceService {
         Assert.assertTrue(isVisible(WorkspaceConstants.CREATED_NOTIFICATION));
     }
 
-    //Random number
-    public static void randomNumber(){
-        Random random = new Random();
-        int randomNumber = random.nextInt(1000);
-    }
-
     // X
     public static void X() {
         WebActionManager.click(WorkspaceConstants.X);
@@ -75,5 +69,8 @@ public class WorkspaceService {
         Assert.assertTrue(isVisible(WorkspaceConstants.DELETE_MESSAGE));
     }
 
+    public static void randomName(){
+
+    }
 
 }
