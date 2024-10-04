@@ -7,7 +7,7 @@ import lippia.web.services.UpdateService;
 public class UpdateSteps {
 
     @And("The client click on 'SETTINGS'")
-        public void clickOnSettings(){
+        public void theClientClickOnSettings() throws InterruptedException {
         UpdateService.clickOnSettings();
     }
 
