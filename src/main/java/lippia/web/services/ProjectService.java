@@ -5,6 +5,7 @@ import junit.framework.Assert;
 import lippia.web.constants.LogInConstants;
 import lippia.web.constants.ProjectConstants;
 
+import static com.crowdar.core.actions.ActionManager.getText;
 import static com.crowdar.core.actions.ActionManager.isVisible;
 
 //import static com.crowdar.core.actions.ActionManager.getText;
@@ -21,7 +22,7 @@ public class ProjectService {
         WebActionManager.click(ProjectConstants.MENU_PROJECT);
         WebActionManager.setInput(ProjectConstants.INPUT_FIND_PROJECT, name);
         WebActionManager.click(ProjectConstants.APLLY_FILTER);
-        Assert.assertTrue(isVisible(ProjectConstants.PROJECT_NAME_LIST));
-        //Assert.assertEquals(name, getText(ProjectConstants.PROJECT_NAME_LIST), "El projecto no se creo");
+        //Assert.assertTrue(isVisible(ProjectConstants.PROJECT_NAME_LIST));
+        Assert.assertEquals(name, getText(ProjectConstants.PROJECT_NAME_LIST), "El projecto no se creo");
     }
 }

@@ -58,6 +58,7 @@ public class TimeTrackerSteps extends PageSteps {
 
     @And("El usuario hace click en 'Create New Workspace'")
     public void elUsuarioHaceClickEnCreateNewWorkspace() {
+
         TimeTrackerService.createNewWorkSpace();
     }
 
