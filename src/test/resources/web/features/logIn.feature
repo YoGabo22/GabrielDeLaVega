@@ -16,7 +16,7 @@ Feature: Clockify log in
     And The client click on Login button
     Then The client is on clockify dashboard page
 
-  @WrongEmail @Invalid @InvalidEmail @Automated @Do
+  @WrongEmail @Invalid @InvalidEmail @Automated
   Scenario: The client try failure manually log in with a wrong Email
     Given The client is on clockify log in page
     When The client click on 'Log in manually'

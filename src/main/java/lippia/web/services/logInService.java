@@ -42,6 +42,7 @@ public class logInService {
 
     //Click password
     public static void passwordClick(){
+        waitVisibility(logInConstants.CLICK_PASSWORD);
         WebActionManager.click(logInConstants.CLICK_PASSWORD);
     }
 

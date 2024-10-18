@@ -1,7 +1,7 @@
 @LogOut
 Feature: Clockify log out
 
-  @Smoke @Automated
+  @Smoke @Automated @Do
   Scenario: Log out successfully
     Given The client is on clockify page
     And The client click on 'Log in manually'

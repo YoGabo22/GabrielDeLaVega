@@ -32,7 +32,8 @@ public class landingPageService extends ActionManager {
 
     //Verify log in button
     public static void GoogleButton() {
-        waitVisibility(LandingPageConstants.GOOGLE_BUTTON);
+        WebActionManager.waitPresences(LandingPageConstants.GOOGLE_BUTTON);
+        WebActionManager.waitVisibility(LandingPageConstants.GOOGLE_BUTTON);
         Assert.assertTrue(isVisible(LandingPageConstants.GOOGLE_BUTTON));
     }
 

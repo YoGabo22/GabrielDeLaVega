@@ -1,7 +1,7 @@
 @Update
   Feature: Update
 
-    @Smoke
+    @Smoke @Automated
     Scenario Outline: Update workspace name
       Given The client is on clockify page
       And The client click on 'Log in manually'
