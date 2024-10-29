@@ -1,7 +1,7 @@
 package lippia.web.services;
 
 import com.crowdar.core.actions.WebActionManager;
-import junit.framework.Assert;
+import org.testng.Assert;
 import lippia.web.constants.LogInConstants;
 import lippia.web.constants.ProjectConstants;
 
